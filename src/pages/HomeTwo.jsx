@@ -6,18 +6,18 @@ import HeroTwo from "../components/HeroTwo";
 import AboutTwo from "../components/AboutTwo";
 import ServiceThree from "../components/ServiceThree";
 import WhyChoose from "../components/WhyChoose";
-import PortfolioTwo from "../components/PortfolioTwo";
-import TestimonialTwo from "../components/TestimonialTwo";
+// import PortfolioTwo from "../components/PortfolioTwo";
+// import TestimonialTwo from "../components/TestimonialTwo";
 import CounterOne from "../components/CounterOne";
-import TeamTwo from "../components/TeamTwo";
-import ClientOne from "../components/ClientOne";
-import EventOne from "../components/EventOne";
-import PricingOne from "../components/PricingOne";
+// import TeamTwo from "../components/TeamTwo";
+// import ClientOne from "../components/ClientOne";
+// import EventOne from "../components/EventOne";
+// import PricingOne from "../components/PricingOne";
 import AppointmentOne from "../components/AppointmentOne";
-import CTATwo from "../components/CTATwo";
-import BlogTwo from "../components/BlogTwo";
+// import CTATwo from "../components/CTATwo";
+// import BlogTwo from "../components/BlogTwo";
 import FooterTwo from "../components/FooterTwo";
-import CTAOne from "../components/CTAOne";
+// import CTAOne from "../components/CTAOne";
 
 const HomeTwo = () => {
   let [active, setActive] = useState(true);
