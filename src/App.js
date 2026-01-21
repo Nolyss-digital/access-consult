@@ -20,6 +20,8 @@ import Team from "./pages/Team";
 import TeamDetails from "./pages/TeamDetails";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
+import Sasu from "./pages/Sasu";
+import SiteWeb from "./pages/sitesweb";
 
 const App = () => {
   return (
@@ -45,6 +47,11 @@ const App = () => {
           <Route exact path="/team-details" element={<TeamDetails />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="*" element={<Error />} />
+          <Route exact path="/sasu" element={<Sasu />} />
+               <Route exact path="/creation-site-web" element={<SiteWeb />} />
+
+
+
         </Routes>
       </BrowserRouter>
     </>

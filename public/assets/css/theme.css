@@ -3613,7 +3613,7 @@ a.text-theme:hover,
 .main-menu a {
   display: block;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   color: var(--title-color);
   text-transform: uppercase;

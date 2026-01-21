@@ -79,7 +79,7 @@
 :root {
   --theme-color: #136aea;
   --theme-color2: #e5da12;
-  --title-color: #19352D;
+  --title-color: #074daf;
   --body-color: #7A7A7A;
   --smoke-color: #EBF3EE;
   --smoke-color2: #F6F6F7;
@@ -4419,7 +4419,7 @@ ul.wp-block-latest-posts li:last-child {
 .main-menu a {
   display: block;
   position: relative;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   color: var(--title-color);
   font-family: var(--title-font);
@@ -4541,7 +4541,7 @@ ul.wp-block-latest-posts li:last-child {
 .main-menu a {
   display: block;
   position: relative;
-  font-weight: 400;
+  font-weight: 600;
   font-family: var(--title-font);
   font-size: 16px;
   color: var(--title-color);

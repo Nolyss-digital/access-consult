@@ -16,7 +16,7 @@ Theme Name: Bizmaster
 Theme URI: https://wowtheme7.com/bizmaster
 Author: wowtheme7
 Author URI: https://wowtheme7.com 
-Description: Bizmaster - Business Consulting React Js Template
+Description: Acces Consulting | Formalités juridiques & création d’entreprise
 Version: 2.0.1
 */
 
@@ -190,10 +190,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 #back-to-top:hover {
   cursor: pointer;
-  background-color: #19352D;
+  background-color: #074daf;
 }
 #back-to-top:active {
-  background-color: #19352D;
+  background-color: #074daf;
 }
 #back-to-top.show {
   opacity: 1;
@@ -1159,7 +1159,7 @@ h1,h2,h3,h4,h5,h6 {
                 alt="logo"
               />
               <h1 className="mt-4">
-                Bizmaster - Business Consulting React Js Template
+                Acces Consulting | Formalités juridiques & création d’entreprise
               </h1>
               <p className="me-5 mb-5">
                 Bizmaster is Business Consulting React Js Template built for an array

@@ -5,13 +5,13 @@ import HeaderOne from "../components/HeaderOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import Newsletter from "../components/Newsletter";
-import ServiceView from "../components/ServiceView";
-import AppointmentTwo from "../components/AppointmentTwo";
+import ServiceInnerDetails from "../components/ServiceInnerDetails";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
 
 
-const Service = () => {
+
+const SiteWeb = () => {
   let [active, setActive] = useState(true);
   useEffect(() => {
     setTimeout(function () {
@@ -24,20 +24,17 @@ const Service = () => {
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"Service"} />
+      <HelmetReact title={"Création de sites web"} />
 
       {/* HeaderFive */}
       <HeaderTwo />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="Service" />
+      <Breadcrumb title="Création de sites web" />
 
-      {/* ServiceOne */}
-      <ServiceView />
+      {/* ServiceDetails */}
+      <ServiceInnerDetails />
 
-
-      {/* AppointmentTwo */}
-      <AppointmentTwo />
 
       {/* Newsletter */}
       <Newsletter />
@@ -49,4 +46,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default SiteWeb;

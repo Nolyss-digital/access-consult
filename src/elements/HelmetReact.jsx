@@ -4,13 +4,14 @@ const HelmetReact = ({ title }) => {
   return (
     <Helmet>
       <title>
-        {title} || Bizmaster - Business Consulting React Js Template
+        {title} || Acces Consulting | Formalités juridiques & création d’entreprise
       </title>
       <meta
         name="description"
-        content="Bizmaster - Business Consulting React Js Template"
+        content="Acces Consulting - Formalités juridiques & création d’entreprise"
       />
     </Helmet>
+
   );
 };
 

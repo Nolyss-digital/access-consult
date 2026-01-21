@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
-import HeaderOne from "../components/HeaderOne";
 import Breadcrumb from "../components/Breadcrumb";
 import GoalArea from "../components/GoalArea";
 import AboutOne from "../components/AboutOne";
@@ -11,6 +10,8 @@ import CounterOne from "../components/CounterOne";
 import WhyChoose from "../components/WhyChoose";
 import FooterOne from "../components/FooterOne";
 import Newsletter from "../components/Newsletter";
+import HeaderTwo from "../components/HeaderTwo";
+import FooterTwo from "../components/FooterTwo";
 
 const About = () => {
   let [active, setActive] = useState(true);
@@ -28,7 +29,7 @@ const About = () => {
       <HelmetReact title={"About"} />
 
       {/* HeaderFive */}
-      <HeaderOne />
+      <HeaderTwo />
 
       {/* Breadcrumb */}
       <Breadcrumb title="About Us" />
@@ -56,10 +57,10 @@ const About = () => {
       </div>
 
       {/* Newsletter */}
-      <Newsletter />
+      {/* <Newsletter /> */}
 
       {/* FooterOne */}
-      <FooterOne />
+      <FooterTwo />
 
 
 

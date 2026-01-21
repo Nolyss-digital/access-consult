@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
-// import HeaderOne from "../components/HeaderOne";
-import Breadcrumb from "../components/Breadcrumb";
-import FooterOne from "../components/FooterOne";
-import Newsletter from "../components/Newsletter";
-import ContactInner from "../components/ContactInner";
 import HeaderTwo from "../components/HeaderTwo";
+import Breadcrumb from "../components/Breadcrumb";
 import FooterTwo from "../components/FooterTwo";
 
-
-
-const Contact = () => {
+const Sasu = () => {
   let [active, setActive] = useState(true);
   useEffect(() => {
     setTimeout(function () {
@@ -20,29 +14,29 @@ const Contact = () => {
   }, []);
   return (
     <>
-      {/* Preloader */}
+          {/* Preloader */}
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"Contact"} />
+      <HelmetReact title={"Sasu"} />
 
       {/* HeaderFive */}
       <HeaderTwo />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="Contact" />
+      <Breadcrumb title="Sasu" />
 
-      {/* ContactInner */}
-      <ContactInner />
+    
 
-      {/* Newsletter */}
-      {/* <Newsletter /> */}
+
+
 
       {/* FooterOne */}
       <FooterTwo />
-
+    
     </>
-  );
+
+      );
 };
 
-export default Contact;
+export default Sasu;
