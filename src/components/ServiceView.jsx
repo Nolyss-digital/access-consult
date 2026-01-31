@@ -15,7 +15,7 @@ const ServiceView = () => {
             </div>
             <div className="service-card_content">
               <h4 className="service-card_title">
-                <Link to="/service-details">
+                <Link to="/creation-gestion-entreprises">
                   Création & gestion d’entreprises
                 </Link>
               </h4>
@@ -23,7 +23,7 @@ const ServiceView = () => {
                 Création, modification, cession, radiation et liquidation
                 d’entreprises dans le respect des obligations légales.
               </p>
-              <Link to="/service-details" className="link-btn">
+              <Link to="/creation-gestion-entreprises" className="link-btn">
                 Lire plus <i className="fas fa-arrow-right" />
               </Link>
             </div>

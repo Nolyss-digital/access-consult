@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Sasu from "./pages/Sasu";
 import SiteWeb from "./pages/sitesweb";
+import CreationEntreprises from "./pages/CreationEntreprises";
 
 const App = () => {
   return (
@@ -48,10 +49,8 @@ const App = () => {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="*" element={<Error />} />
           <Route exact path="/sasu" element={<Sasu />} />
-               <Route exact path="/creation-site-web" element={<SiteWeb />} />
-
-
-
+          <Route exact path="/creation-site-web" element={<SiteWeb />} />
+          <Route exact path="/creation-gestion-entreprises" element={<CreationEntreprises />} />
         </Routes>
       </BrowserRouter>
     </>
