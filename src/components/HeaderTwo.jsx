@@ -76,7 +76,7 @@ const HeaderTwo = () => {
               <Link to="#">Services</Link>
               <ul className="sub-menu submenu-class">
                 <li><Link to="/creation-gestion-entreprises" onClick={mobileMenu}>Création & gestion d’entreprises</Link></li>
-                <li><Link to="/services/gestion-paie" onClick={mobileMenu}>Gestion de la paie</Link></li>
+                <li><Link to="/gestion-paie" onClick={mobileMenu}>Gestion de la paie</Link></li>
                 <li><Link to="/services/domiciliation-entreprises" onClick={mobileMenu}>Domiciliation d’entreprises</Link></li>
                 <li><Link to="/services/administration-entreprises" onClick={mobileMenu}>Administration des entreprises</Link></li>
                 <li><Link to="/services/appels-offres" onClick={mobileMenu}>Assistance aux appels d’offres</Link></li>
@@ -127,11 +127,11 @@ const HeaderTwo = () => {
                       <Link to="#">Services</Link>
                       <ul className="sub-menu">
                         <li><Link to="/creation-gestion-entreprises">Création & gestion d’entreprises</Link></li>
-                        <li><Link to="/services/gestion-paie">Gestion de la paie</Link></li>
-                        <li><Link to="/services/domiciliation-entreprises">Domiciliation d’entreprises</Link></li>
-                        <li><Link to="/services/administration-entreprises">Administration des entreprises</Link></li>
-                        <li><Link to="/services/appels-offres">Assistance aux appels d’offres</Link></li>
-                        <li><Link to="/services/reception-emission-appels">Réception & émission d’appels</Link></li>
+                        <li><Link to="/gestion-paie">Gestion de la paie</Link></li>
+                        <li><Link to="/domiciliation-entreprises">Domiciliation d’entreprises</Link></li>
+                        <li><Link to="/administration-entreprises">Administration des entreprises</Link></li>
+                        <li><Link to="/Assistance-appels-offres">Assistance aux appels d’offres</Link></li>
+                        <li><Link to="/reception-emission-appels">Réception & émission d’appels</Link></li>
                         <li><Link to="/services/developpement-commercial">Développement commercial</Link></li>
                         <li><Link to="/services/creation-sites-web">Création de sites web</Link></li>
                         <li><Link to="/services/gestion-reseaux-sociaux">Gestion des réseaux sociaux</Link></li>

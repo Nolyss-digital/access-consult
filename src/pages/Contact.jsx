@@ -3,8 +3,6 @@ import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
 // import HeaderOne from "../components/HeaderOne";
 import Breadcrumb from "../components/Breadcrumb";
-import FooterOne from "../components/FooterOne";
-import Newsletter from "../components/Newsletter";
 import ContactInner from "../components/ContactInner";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
@@ -34,9 +32,6 @@ const Contact = () => {
 
       {/* ContactInner */}
       <ContactInner />
-
-      {/* Newsletter */}
-      {/* <Newsletter /> */}
 
       {/* FooterOne */}
       <FooterTwo />

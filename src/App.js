@@ -23,6 +23,11 @@ import Error from "./pages/Error";
 import Sasu from "./pages/Sasu";
 import SiteWeb from "./pages/sitesweb";
 import CreationEntreprises from "./pages/CreationEntreprises";
+import GestionPaie from "./pages/GestionPaie";
+import DomiciliationEntreprises from "./pages/DomiciliationEntreprises";
+import AdministrationEntreprises from "./pages/AdministrationEntreprises";
+import Assistance from "./pages/Assistance";
+import ReceptionAppels from "./pages/ReceptionAppels";
 
 const App = () => {
   return (
@@ -51,6 +56,12 @@ const App = () => {
           <Route exact path="/sasu" element={<Sasu />} />
           <Route exact path="/creation-site-web" element={<SiteWeb />} />
           <Route exact path="/creation-gestion-entreprises" element={<CreationEntreprises />} />
+          <Route exact path="/gestion-paie" element={<GestionPaie />} />
+          <Route exact path="/domiciliation-entreprises" element={<DomiciliationEntreprises />} />
+          <Route exact path="/administration-entreprises" element={<AdministrationEntreprises />} />
+           <Route exact path="/Assistance-appels-offres" element={<Assistance />} />
+           <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
+
         </Routes>
       </BrowserRouter>
     </>
