@@ -4,7 +4,7 @@ const HelmetReact = ({ title }) => {
   return (
     <Helmet>
       <title>
-        {title} || Acces Consulting | Formalités juridiques & création d’entreprise
+        {title} - Acces Consulting | Formalités juridiques & création d’entreprise
       </title>
       <meta
         name="description"

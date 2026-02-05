@@ -25,29 +25,18 @@ const AboutOne = () => {
               <div className="title-area me-xl-5 mb-20">
                 <span className="sub-title">
                   <img src="assets/img/icon/title_left.svg" alt="shape" />
-                  About Us
+                  À propos de nous
                 </span>
-                <h2 className="sec-title">Achieve Your a of Business </h2>
+                <h2 className="sec-title">
+                  Un partenaire fiable pour votre entreprise
+                </h2>
                 <p className="sec-text mb-35">
-                  Use receiving aco growin number of currencies and get paid
-                  like design receiving aco grow
+                  Acces Consulting accompagne les entrepreneurs et dirigeants
+                  dans toutes les démarches juridiques, administratives et
+                  stratégiques liées à la vie de leur entreprise.
                 </p>
               </div>
-              <div className="achive-about">
-                <div className="achive-about_content">
-                  <div className="achive-about_icon">
-                    <i className="fas fa-check" />
-                  </div>
-                  <div className="media-body">
-                    <h3 className="box-title">Strategic Solutions Pro</h3>
-                    <p className="achive-about_text">
-                      There are many variati of passages of engineer's
-                      available. The majority have suffered alteration in
-                      engineer's available.
-                    </p>
-                  </div>
-                </div>
-              </div>
+
               <div className="achive-about">
                 <div className="achive-about_content">
                   <div className="achive-about_icon">
@@ -55,21 +44,41 @@ const AboutOne = () => {
                   </div>
                   <div className="media-body">
                     <h3 className="box-title">
-                      Performance Enhancement Partners
+                      Accompagnement juridique sur mesure
                     </h3>
                     <p className="achive-about_text">
-                      There are many variati of passages of engineer's
-                      available. The majority have suffered alteration in
-                      engineer's available.
+                      De la création à l’évolution de votre société, nous
+                      sécurisons chaque étape en conformité avec la
+                      réglementation en vigueur.
                     </p>
                   </div>
                 </div>
               </div>
+
+              <div className="achive-about">
+                <div className="achive-about_content">
+                  <div className="achive-about_icon">
+                    <i className="fas fa-check" />
+                  </div>
+                  <div className="media-body">
+                    <h3 className="box-title">
+                      Expertise administrative & business
+                    </h3>
+                    <p className="achive-about_text">
+                      Gestion administrative, paie, domiciliation,
+                      développement commercial et solutions digitales pour
+                      soutenir la croissance de votre entreprise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="btn-wrap mt-20">
                 <Link to="/about" className="global-btn mt-xl-0 mt-20">
-                  Read More <i className="fas fa-arrow-right ms-2" />
+                  En savoir plus <i className="fas fa-arrow-right ms-2" />
                 </Link>
               </div>
+
             </div>
           </div>
         </div>
@@ -77,5 +86,6 @@ const AboutOne = () => {
     </div>
   );
 };
+
 
 export default AboutOne;

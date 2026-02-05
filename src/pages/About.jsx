@@ -24,16 +24,16 @@ const About = () => {
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"About"} />
+      <HelmetReact title={"À propos"} />
 
       {/* HeaderFive */}
       <HeaderTwo />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="About Us" />
+      <Breadcrumb title="À propos" />
 
       {/* GoalArea */}
-      <GoalArea />
+      {/* <GoalArea /> */}
 
       {/* AboutOne */}
       <AboutOne />

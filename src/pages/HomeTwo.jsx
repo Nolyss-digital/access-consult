@@ -32,7 +32,7 @@ const HomeTwo = () => {
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"Home"} />
+      <HelmetReact title={"Accueil"} />
 
       {/* HeaderTwo */}
       <HeaderTwo />
