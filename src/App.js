@@ -28,6 +28,8 @@ import DomiciliationEntreprises from "./pages/DomiciliationEntreprises";
 import AdministrationEntreprises from "./pages/AdministrationEntreprises";
 import Assistance from "./pages/Assistance";
 import ReceptionAppels from "./pages/ReceptionAppels";
+import DevCommercial from "./pages/DevCommercial";
+import ResauxSociaux from "./pages/ResauxSociaux";
 
 const App = () => {
   return (
@@ -61,6 +63,9 @@ const App = () => {
           <Route exact path="/administration-entreprises" element={<AdministrationEntreprises />} />
            <Route exact path="/Assistance-appels-offres" element={<Assistance />} />
            <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
+            <Route exact path="/developpement-commercial" element={<DevCommercial />} />
+            <Route exact path="/gestion-reseaux-sociaux" element={<ResauxSociaux />} />
+
 
         </Routes>
       </BrowserRouter>

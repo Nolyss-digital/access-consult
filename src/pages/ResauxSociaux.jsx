@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
 import Breadcrumb from "../components/Breadcrumb";
-import ServiceInnerDetails from "../components/ServiceInnerDetails";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
 import AppointmentOne from "../components/AppointmentOne";
+import Reseaux from "../components/RS/Reseaux";
 
-
-
-const SiteWeb = () => {
+const ResauxSociaux = () => {
   let [active, setActive] = useState(true);
   useEffect(() => {
     setTimeout(function () {
@@ -22,30 +20,36 @@ const SiteWeb = () => {
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"Création de sites web"} />
+      <HelmetReact title={"Gestion des réseaux sociaux"} />
 
       {/* HeaderFive */}
       <HeaderTwo />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="Création de sites web" />
+      <Breadcrumb title="Gestion des réseaux sociaux" />
 
-      {/* ServiceDetails */}
-      <ServiceInnerDetails />
+      {/* AboutOne */}
+      <Reseaux />
 
-
-      {/* Newsletter */}
-      {/* <Newsletter /> */}
-
-       <div className="pt-5">
+      {/* ProcessThree */}
+      {/* <ProcessThree /> */}
+      <div className="pt-5">
         <AppointmentOne />
       </div>
 
       {/* FooterOne */}
       <FooterTwo />
 
+
+
+
+
+
+
+
+
     </>
   );
 };
 
-export default SiteWeb;
+export default ResauxSociaux;

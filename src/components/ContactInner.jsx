@@ -22,10 +22,10 @@ const ContactInner = () => {
                                         <i className="fas fa-phone-alt" />
                                     </div>
                                     <div className="contact-info_details">
-                                        <h6 className="contact-info_title">Phone</h6>
+                                        <h6 className="contact-info_title">Téléphone</h6>
                                         <p className="contact-info_text">
-                                            <span >(629) 555-0129</span> <br />
-                                            <span >01254693326</span>
+                                            <span >(+33) 75247851</span> <br />
+                                            <span >(+33) 75247851</span>
                                         </p>
                                     </div>
                                 </div>
@@ -36,9 +36,9 @@ const ContactInner = () => {
                                         <i className="fas fa-map-marker-alt" />
                                     </div>
                                     <div className="contact-info_details">
-                                        <h6 className="contact-info_title">Location</h6>
+                                        <h6 className="contact-info_title">Adresse</h6>
                                         <p className="contact-info_text">
-                                            4517 Washington Av Kentucky <br /> 39495
+                                            12 Rue de l’Entreprise, 75001 Paris, France
                                         </p>
                                     </div>
                                 </div>
@@ -51,8 +51,8 @@ const ContactInner = () => {
                                     <div className="contact-info_details">
                                         <h6 className="contact-info_title">Email</h6>
                                         <p className="contact-info_text">
-                                            <span>demo@gmail.com</span> <br />
-                                            <span>admin@yahoo.com</span>
+                                            <span>contact@access-consult.fr</span> <br />
+                                            <span>accueil@access-consult.fr</span>
                                         </p>
                                     </div>
                                 </div>
@@ -61,94 +61,137 @@ const ContactInner = () => {
                     </div>
                 </div>
             </div>
-            <div className="space-bottom">
-                <div className="container">
-                    <div className="row gy-40 justify-content-between">
-                        <div className="col-lg-4">
-                            <div className="title-area mb-0">
-                                <span className="sub-title">
-                                    <img src="assets/img/icon/title_left.svg" alt="shape" />
-                                    Contact Us
-                                </span>
-                                <h2 className="sec-title style2">Get In Touch</h2>
-                                <p className="mb-40">
-                                    Design is this a broad category encompasses various technological
-                                    solutions{" "}
-                                </p>
-                                <div className="social-btn style4">
-                                    <Link to="#" tabIndex={-1}>
-                                        <i className="fab fa-facebook-f" />
-                                    </Link>
-                                    <Link to="#" tabIndex={-1}>
-                                        <i className="fab fa-linkedin-in" />
-                                    </Link>
-                                    <Link to="#" tabIndex={-1}>
-                                        <i className="fab fa-twitter" />
-                                    </Link>
-                                    <Link to="#" tabIndex={-1}>
-                                        <i className="fab fa-instagram" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-8">
-                            <div className="contact-form">
-                                <div className="row">
-                                    <div className="col-md-6 form-group">
-                                        <input
-                                            type="text"
-                                            placeholder="Your Name"
-                                            className="form-control style-border"
-                                        />
-                                    </div>
-                                    <div className="col-md-6 form-group">
-                                        <input
-                                            type="text"
-                                            placeholder="Your Email"
-                                            className="form-control style-border"
-                                        />
-                                    </div>
-                                    <div className="col-md-6 form-group">
-                                        <input
-                                            type="text"
-                                            placeholder="Phone Number"
-                                            className="form-control style-border"
-                                        />
-                                    </div>
-                                    <div className="col-md-6 form-group">
-                                        <select
-                                            name="subject"
-                                            id="subject"
-                                            className="form-select style-border"
-                                        >
-                                            <option defaultValue={1}>
-                                                Subject
-                                            </option>
-                                            <option value={1}>Subject 01</option>
-                                            <option value={2}>Subject 02</option>
-                                            <option value={3}>Subject 03</option>
-                                        </select>
-                                        <i className="fas fa-angle-down" />
-                                    </div>
-                                    <div className="col-12 form-group">
-                                        <textarea
-                                            placeholder="Message here.."
-                                            className="form-control style-border"
-                                            defaultValue={""}
-                                        />
-                                    </div>
-                                    <div className="col-12 form-group mb-0">
-                                        <button className="global-btn w-100">
-                                            Send Now
-                                            <img src="assets/img/icon/right-icon.svg" alt="Bizmaster" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div className="space-bottom">
+  <div className="container">
+    <div className="row gy-40 justify-content-between">
+      
+      {/* ===== LEFT CONTENT ===== */}
+      <div className="col-lg-4">
+        <div className="title-area mb-0">
+          <span className="sub-title">
+            <img src="assets/img/icon/title_left.svg" alt="shape" />
+            Access Consulting
+          </span>
+          <h2 className="sec-title style2">Contactez-nous</h2>
+          <p className="mb-40">
+            Vous avez un projet ou besoin d’un accompagnement ?
+            L’équipe Access Consulting est à votre écoute pour vous proposer
+            des solutions adaptées à vos objectifs.
+          </p>
+
+          <div className="social-btn style4">
+            <Link to="#" tabIndex={-1}>
+              <i className="fab fa-facebook-f" />
+            </Link>
+            <Link to="#" tabIndex={-1}>
+              <i className="fab fa-linkedin-in" />
+            </Link>
+            <Link to="#" tabIndex={-1}>
+              <i className="fab fa-instagram" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* ===== FORM ===== */}
+      <div className="col-xl-6 col-lg-8">
+        <div className="contact-form">
+          <div className="row">
+
+            <div className="col-md-6 form-group">
+              <input
+                type="text"
+                placeholder="Nom & Prénom"
+                className="form-control style-border"
+              />
             </div>
+
+            <div className="col-md-6 form-group">
+              <input
+                type="email"
+                placeholder="Adresse email"
+                className="form-control style-border"
+              />
+            </div>
+
+            <div className="col-md-6 form-group">
+              <input
+                type="text"
+                placeholder="Numéro de téléphone"
+                className="form-control style-border"
+              />
+            </div>
+
+            {/* ===== SUBJECT WITH SERVICES ===== */}
+            <div className="col-md-6 form-group">
+              <select
+                name="subject"
+                id="subject"
+                className="form-select style-border"
+              >
+                <option value="">
+                  Choisir un service
+                </option>
+
+                <option value="creation-entreprise">
+                  Création & gestion d’entreprises
+                </option>
+                <option value="paie">
+                  Gestion de la paie
+                </option>
+                <option value="domiciliation">
+                  Domiciliation d’entreprises
+                </option>
+                <option value="administration">
+                  Administration des entreprises
+                </option>
+                <option value="appels-offres">
+                  Assistance aux appels d’offres
+                </option>
+                <option value="reception-emission">
+                  Réception & émission d’appels
+                </option>
+                <option value="developpement-commercial">
+                  Développement commercial
+                </option>
+                <option value="sites-web">
+                  Création de sites web
+                </option>
+                <option value="reseaux-sociaux">
+                  Gestion des réseaux sociaux
+                </option>
+                <option value="autre">
+                  Autre demande
+                </option>
+              </select>
+              <i className="fas fa-angle-down" />
+            </div>
+
+            <div className="col-12 form-group">
+              <textarea
+                placeholder="Décrivez votre besoin..."
+                className="form-control style-border"
+              />
+            </div>
+
+            <div className="col-12 form-group mb-0">
+              <button className="global-btn w-100">
+                Envoyer la demande
+                <img
+                  src="assets/img/icon/right-icon.svg"
+                  alt="Access Consulting"
+                />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
         </>
 
     )

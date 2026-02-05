@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
 import Breadcrumb from "../components/Breadcrumb";
-import ServiceInnerDetails from "../components/ServiceInnerDetails";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
 import AppointmentOne from "../components/AppointmentOne";
+import AboutDevCommercial from "../components/DevCommercial/AboutDevCommercial";
 
-
-
-const SiteWeb = () => {
+const DevCommercial = () => {
   let [active, setActive] = useState(true);
   useEffect(() => {
     setTimeout(function () {
@@ -22,30 +20,36 @@ const SiteWeb = () => {
       {active === true && <Preloader />}
 
       {/* Helmet */}
-      <HelmetReact title={"Création de sites web"} />
+      <HelmetReact title={"Développement commercial"} />
 
       {/* HeaderFive */}
       <HeaderTwo />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="Création de sites web" />
+      <Breadcrumb title="Développement commercial" />
 
-      {/* ServiceDetails */}
-      <ServiceInnerDetails />
+      {/* AboutOne */}
+      <AboutDevCommercial />
 
-
-      {/* Newsletter */}
-      {/* <Newsletter /> */}
-
-       <div className="pt-5">
+      {/* ProcessThree */}
+      {/* <ProcessThree /> */}
+      <div className="pt-5">
         <AppointmentOne />
       </div>
 
       {/* FooterOne */}
       <FooterTwo />
 
+
+
+
+
+
+
+
+
     </>
   );
 };
 
-export default SiteWeb;
+export default DevCommercial;
