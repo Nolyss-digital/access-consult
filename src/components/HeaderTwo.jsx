@@ -82,8 +82,8 @@ const HeaderTwo = () => {
                 <li><Link to="/Assistance-appels-offres" onClick={mobileMenu}>Assistance aux appels d’offres</Link></li>
                 <li><Link to="/reception-emission-appels" onClick={mobileMenu}>Réception & émission d’appels</Link></li>
                 <li><Link to="/developpement-commercial" onClick={mobileMenu}>Développement commercial</Link></li>
-                <li><Link to="/services/creation-sites-web" onClick={mobileMenu}>Création de sites web</Link></li>
-                <li><Link to="/services/gestion-reseaux-sociaux" onClick={mobileMenu}>Gestion des réseaux sociaux</Link></li>
+                <li><Link to="/creation-site-web" onClick={mobileMenu}>Création de sites web</Link></li>
+                <li><Link to="/gestion-reseaux-sociaux" onClick={mobileMenu}>Gestion des réseaux sociaux</Link></li>
               </ul>
             </li>
 
