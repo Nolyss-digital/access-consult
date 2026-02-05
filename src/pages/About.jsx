@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
 import Breadcrumb from "../components/Breadcrumb";
-import GoalArea from "../components/GoalArea";
 import AboutOne from "../components/AboutOne";
 import ProcessThree from "../components/ProcessThree";
 import TestimonialOne from "../components/TestimonialOne";
