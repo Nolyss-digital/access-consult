@@ -61,12 +61,10 @@ const App = () => {
           <Route exact path="/gestion-paie" element={<GestionPaie />} />
           <Route exact path="/domiciliation-entreprises" element={<DomiciliationEntreprises />} />
           <Route exact path="/administration-entreprises" element={<AdministrationEntreprises />} />
-           <Route exact path="/Assistance-appels-offres" element={<Assistance />} />
-           <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
-            <Route exact path="/developpement-commercial" element={<DevCommercial />} />
-            <Route exact path="/gestion-reseaux-sociaux" element={<ResauxSociaux />} />
-
-
+          <Route exact path="/Assistance-appels-offres" element={<Assistance />} />
+          <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
+          <Route exact path="/developpement-commercial" element={<DevCommercial />} />
+          <Route exact path="/gestion-reseaux-sociaux" element={<ResauxSociaux />} />
         </Routes>
       </BrowserRouter>
     </>

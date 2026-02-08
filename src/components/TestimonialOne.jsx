@@ -119,7 +119,7 @@ const TestimonialOne = () => {
                           </div>
                           <div className="testi-card-profile-details">
                             <h4 className="testi-profile-title">
-                              Jean Dupont
+                              Alexandre
                             </h4>
                             <span className="testi-profile-desig">
                               Entrepreneur
@@ -152,7 +152,7 @@ const TestimonialOne = () => {
                         <div className="testi-card-profile">
                           <div className="testi-profile_thumb">
                             <img
-                              src="assets/img/testimonial/testi-thumb_2.png"
+                              src="assets/img/testimonial/testi-thumb_1.png"
                               alt="img"
                             />
                           </div>

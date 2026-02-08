@@ -24,7 +24,7 @@ const FooterTwo = () => {
           </p>
           <div className="social-btn style3">
             <span className="social-title">Suivez-nous</span>
-            <Link to="#"><i className="fab fa-facebook-f" /></Link>
+            <Link to="https://www.facebook.com/accessconsulting"><i className="fab fa-facebook-f" /></Link>
             <Link to="#"><i className="fab fa-instagram" /></Link>
             <Link to="#"><i className="fab fa-linkedin-in" /></Link>
             <Link to="#"><i className="fab fa-twitter" /></Link>
@@ -50,14 +50,15 @@ const FooterTwo = () => {
             <div className="widget-contact-grid">
               <div className="icon"><i className="fas fa-map-marker-alt" /></div>
               <div className="contact-grid-details">
-                <h6>12 Rue de l’Entreprise, 75001 Paris, France</h6>
+                <a href="https://maps.app.goo.gl/6r5FgUSFffTg1d8u7"><h6>106 Avenue de Saint Louis 13015 Marseille, France</h6></a>
+                
               </div>
             </div>
 
             <div className="widget-contact-grid">
               <div className="working-time">
                 <span className="title">Horaires</span>
-                <p className="desc">Lundi à Vendredi : 09h00 - 17h00</p>
+                <p className="desc">Lundi à Vendredi : 09h00 - 12h00 | 13h30 - 18h00</p>
               </div>
             </div>
 
@@ -71,10 +72,10 @@ const FooterTwo = () => {
           <h3 className="widget_title">Liens utiles</h3>
           <div className="menu-all-pages-container">
             <ul className="menu">
-              <li><Link to="/service">Créer ma société</Link></li>
-              <li><Link to="/service">Modifier une entreprise</Link></li>
-              <li><Link to="/service">Fermer votre société</Link></li>
-              <li><Link to="/service">Autres opérateurs</Link></li>
+              <li><Link to="/creation-gestion-entreprises">Création & gestion d’entreprises</Link></li>
+              <li><Link to="/domiciliation-entreprises">Domiciliation d’entreprises</Link></li>
+              <li><Link to="/developpement-commercial">Développement commercial</Link></li>
+              <li><Link to="/creation-site-web">Création de sites web</Link></li>
             </ul>
           </div>
         </div>

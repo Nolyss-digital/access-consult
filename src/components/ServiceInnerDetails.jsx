@@ -70,7 +70,7 @@ const ServiceInnerDetails = () => {
               design UX/UI et technologies modernes.
             </p>
 
-            <div className="row gy-4">
+            {/* <div className="row gy-4">
               <div className="col-lg-6">
                 <div className="page-thumb style2">
                   <img
@@ -87,7 +87,7 @@ const ServiceInnerDetails = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <p className="mt-30 mb-n1">
               Nous vous accompagnons de la phase de conception jusqu’à la mise

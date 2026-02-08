@@ -18,18 +18,7 @@ const AboutPaie = () => {
                   <img src="assets/img/normal/about_3-1.jpg" alt="Gestion de la paie" />
                 </div>
                 <div className="about-counter-wrap jump-reverse">
-                  <h3 className="about-counter">
-                    <TrackVisibility once>
-                      {({ isVisible }) =>
-                        isVisible && (
-                          <span className="counter-number">
-                            <CountUp delay={0} start={0} end={20} />+
-                          </span>
-                        )
-                      }
-                    </TrackVisibility>
-                  </h3>
-                  <p>Années d’expertise en gestion de la paie</p>
+                  <p>Traitement rapide, coûts réduits</p>
                 </div>
               </div>
             </div>

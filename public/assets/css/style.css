@@ -78,7 +78,7 @@
 /*------------------- 1.3. Variable-------------------*/
 :root {
   --theme-color: #136aea;
-  --theme-color2: #e5da12;
+  --theme-color2: #e4b10e;
   --title-color: #074daf;
   --body-color: #7A7A7A;
   --smoke-color: #EBF3EE;
@@ -7155,7 +7155,7 @@ li.trackback {
   bottom: 20%;
   width: 390px;
   height: 390px;
-  background: #e5da12;
+  background: #e4b10e;
   clip-path: path("M236.5 0L472.492 390H0.508072L236.5 0Z");
   z-index: -1;
 }
@@ -11048,7 +11048,7 @@ li.trackback {
   width: 30px;
   border-radius: 5px;
   line-height: 30px;
-  background: #e5da12;
+  background: #e4b10e;
   border: 0;
   font-family: var(--icon-font);
   color: var(--theme-color);

@@ -12,27 +12,13 @@ const AboutAdministaration = () => {
           <div className="row gy-40 gx-60 align-items-center">
 
             {/* Image + Counter */}
-            <div className="col-xl-6">
+           <div className="col-xl-6">
               <div className="about-thumb3">
                 <div className="img1">
-                  <img
-                    src="assets/img/normal/about_3-1.jpg"
-                    alt="Administration des entreprises"
-                  />
+                  <img src="assets/img/normal/about_3-1.jpg" alt="Gestion de la paie" />
                 </div>
                 <div className="about-counter-wrap jump-reverse">
-                  <h3 className="about-counter">
-                    <TrackVisibility once>
-                      {({ isVisible }) =>
-                        isVisible && (
-                          <span className="counter-number">
-                            <CountUp delay={0} start={0} end={18} />+
-                          </span>
-                        )
-                      }
-                    </TrackVisibility>
-                  </h3>
-                  <p>Années d’expertise en gestion administrative</p>
+                  <p>Traitement rapide, coûts réduits</p>
                 </div>
               </div>
             </div>
