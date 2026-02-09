@@ -46,7 +46,7 @@ const AboutTwo = () => {
               Sécuriser vos démarches et vous faire gagner du temps.            </p>
 
             <div className="btn-group">
-              <Link to="/a-propos" className="global-btn style2">
+              <Link to="/about" className="global-btn style2">
                 En savoir plus
                 <img src="assets/img/icon/right-icon.svg" alt="Acces Consulting" />
               </Link>

@@ -32,7 +32,7 @@ const HeroTwo = () => {
             </p>
 
             <div className="btn-group">
-              <Link to="/creation-entreprise" className="global-btn">
+              <Link to="/creation-gestion-entreprises" className="global-btn">
                 Créer mon entreprise
                 <img src="assets/img/icon/right-icon.svg" alt="Acces Consulting" />
               </Link>

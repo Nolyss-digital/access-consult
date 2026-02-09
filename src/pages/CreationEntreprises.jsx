@@ -5,6 +5,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
 import ServiceCreation from "../components/Creation/ServiceCreation";
+import AppointmentOne from "../components/AppointmentOne";
 
 const CreationEntreprises = () => {
   let [active, setActive] = useState(true);
@@ -29,6 +30,10 @@ const CreationEntreprises = () => {
      
       {/* CounterOne */}
       <ServiceCreation />
+      <div className="space-top">
+         <AppointmentOne />
+      </div>
+     
 
       {/* FooterOne */}
       <FooterTwo />
