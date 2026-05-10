@@ -1,41 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
-// import HeaderOne from "../components/HeaderOne";
-import Breadcrumb from "../components/Breadcrumb";
-import ContactInner from "../components/ContactInner";
 import HeaderTwo from "../components/HeaderTwo";
 import FooterTwo from "../components/FooterTwo";
-
-
+import ContactInner from "../components/ContactInner";
 
 const Contact = () => {
-  let [active, setActive] = useState(true);
+  const [active, setActive] = useState(true);
   useEffect(() => {
-    setTimeout(function () {
-      setActive(false);
-    }, 500);
+    const t = setTimeout(() => setActive(false), 500);
+    return () => clearTimeout(t);
   }, []);
+
   return (
     <>
-      {/* Preloader */}
-      {active === true && <Preloader />}
-
-      {/* Helmet */}
+      {active && <Preloader />}
       <HelmetReact title={"Contact"} />
-
-      {/* HeaderFive */}
       <HeaderTwo />
-
-      {/* Breadcrumb */}
-      <Breadcrumb title="Contact" />
-
-      {/* ContactInner */}
       <ContactInner />
-
-      {/* FooterOne */}
       <FooterTwo />
-
     </>
   );
 };

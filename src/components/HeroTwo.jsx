@@ -1,108 +1,73 @@
-import React, { useState } from "react";
-// import TrackVisibility from "react-on-screen";
-// import CountUp from "react-countup";
+import React from "react";
 import { Link } from "react-router-dom";
-import ModalVideo from 'react-modal-video';
-const HeroTwo = () => {
-  const [isOpen, setOpen] = useState(false);
-  return (
-    <>
-      <div
-        className="hero-wrapper hero-2"
-        id="hero"
-        style={{ backgroundImage: "url(assets/img/hero/hero_bg_2_1.png)" }}
-      >
-        <div
-          className="hero-overlay"
-          style={{ backgroundImage: "url(assets/img/hero/hero_overlay_1.png)" }}
-        >
-          {" "}
-        </div>
 
-        <div className="container">
-          <div className="hero-style2">
-            <h1 className="hero-title text-white">
-              Formalités<span className="hero-title2">d’entreprise</span> simplifiées
+const HeroTwo = () => {
+  return (
+    <section className="hero-light" id="hero">
+      <div className="container">
+        <div className="row align-items-center gy-5">
+          {/* Content */}
+          <div className="col-lg-6">
+            <span className="hero-light__badge">
+              <span className="hero-light__badge-dot" />
+              Cabinet de conseil aux entreprises · France
+            </span>
+
+            <h1 className="hero-light__title">
+              Vos <span className="hl-blue">formalités</span> d’entreprise enfin{" "}
+              <span className="hl-yellow">simplifiées</span>.
             </h1>
 
-            <p className="hero-text text-white">
-              Acces Consulting accompagne les entrepreneurs dans la création,
-              la gestion et l’évolution de leur entreprise grâce à des formalités
-              juridiques simples, rapides et sécurisées.
+            <p className="hero-light__text">
+              Access Consulting accompagne entrepreneurs, TPE et PME françaises
+              dans la création, la gestion et le développement de leur activité.
+              Conseil juridique, paie, domiciliation et stratégie commerciale,
+              100&nbsp;% en ligne.
             </p>
 
-            <div className="btn-group">
+            <div className="hero-light__actions">
               <Link to="/creation-gestion-entreprises" className="global-btn">
                 Créer mon entreprise
-                <img src="assets/img/icon/right-icon.svg" alt="Acces Consulting" />
+                <img src="assets/img/icon/right-icon.svg" alt="" />
               </Link>
-
-              {/* <div className="media-wrap">
-      <div className="icon">
-        <span className="play-btn popup-video">
-          <i
-            className="fas fa-solid fa-play"
-            onClick={() => setOpen(true)}
-          />
-        </span>
-      </div>
-
-      <div className="media-body">
-        <h6 className="title text-white">
-          Voir comment ça marche
-        </h6>
-      </div>
-    </div> */}
+              <Link to="/service" className="hero-light__link">
+                Découvrir nos services <i className="fas fa-arrow-right" />
+              </Link>
             </div>
+
+            <ul className="hero-light__guarantees">
+              <li>
+                <i className="fas fa-check" /> Devis gratuit
+              </li>
+              <li>
+                <i className="fas fa-check" /> Sans engagement
+              </li>
+              <li>
+                <i className="fas fa-check" /> Réponse 24h
+              </li>
+            </ul>
           </div>
 
-          {/* <div className="hero-client-box">
-            <div className="client-thumb">
-              <div className="client-thumb-group">
-                <div className="thumb">
-                  <img src="assets/img/client/client-img-2-1.png" alt="avater" />
+          {/* Visual */}
+          <div className="col-lg-6">
+            <div className="hero-light__visual">
+              <img
+                src="assets/img/Conseil-RH.jpg"
+                alt="Conseil RH — Access Consulting"
+                className="hero-light__image"
+              />
+              <div className="hero-light__stat">
+                <div className="hero-light__stat-number">98%</div>
+                <div className="hero-light__stat-text">
+                  <strong>Clients satisfaits</strong>
+                  <small>Sur 100+ missions en France</small>
                 </div>
-                <div className="thumb">
-                  <img src="assets/img/client/client-img-2-2.png" alt="avater" />
-                </div>
-                <div className="thumb">
-                  <img src="assets/img/client/client-img-2-3.png" alt="avater" />
-                </div>
-              </div>
-              <div className="client-box-content">
-                <div className="client-box_wrapp">
-                  <h4 className="cilent-box_counter">
-                    <TrackVisibility once>
-                      {({ isVisible }) =>
-                        isVisible && (
-                          <span className="counter-number">
-                            More <CountUp delay={0} start={0} end={642} />
-                            <span> K</span>
-                          </span>
-                        )
-                      }
-                    </TrackVisibility>
-                  </h4>
-                  <i className="fas fa-check" />
-                </div>
-                <span className="cilent-box_title">
-                  Author Reviews <span className="text-theme">(4.8 of 5)</span>{" "}
-                </span>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
-
       </div>
-      <ModalVideo
-        channel="youtube"
-        youtube={{ mute: 0, autoplay: 0 }}
-        isOpen={isOpen}
-        videoId="8dTfgnkmJGs"
-        onClose={() => setOpen(false)}
-      />
-    </>
-
+    </section>
   );
 };
 

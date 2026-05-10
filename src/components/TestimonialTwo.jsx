@@ -1,165 +1,101 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper";
+
+const testimonials = [
+  {
+    text: "Access Consulting a créé ma SASU en 5 jours. Tout était limpide : statuts, immatriculation, accompagnement comptable. Je recommande à tous les entrepreneurs en France.",
+    name: "Camille Lefèvre",
+    role: "Fondatrice, Atelier Lumen (Paris)",
+  },
+  {
+    text: "L’équipe gère ma paie multi-conventions depuis deux ans. Bulletins fiables, DSN à l’heure, conseil RH précieux. Un vrai partenaire pour ma PME.",
+    name: "Mehdi Tazi",
+    role: "Dirigeant, Tazi BTP SARL (Lyon)",
+  },
+  {
+    text: "Domiciliation à Paris + gestion administrative : j’ai gagné un temps fou. Service client réactif et tarifs très transparents.",
+    name: "Sophie Renard",
+    role: "Consultante indépendante (Bordeaux)",
+  },
+  {
+    text: "Refonte du site web et stratégie SEO locale : +180 % de trafic organique en six mois. Une équipe vraiment experte du marché français.",
+    name: "Julien Bonnet",
+    role: "Co-fondateur, NordCom (Lille)",
+  },
+  {
+    text: "Accompagnement aux appels d’offres impeccable. Nous avons remporté trois marchés publics grâce à leur méthode rigoureuse.",
+    name: "Inès Moreau",
+    role: "Gérante, Moreau & Filles (Marseille)",
+  },
+  {
+    text: "Conseil stratégique de très haut niveau. Access Consulting comprend les enjeux des PME françaises et propose des solutions concrètes.",
+    name: "Antoine Delcroix",
+    role: "Président, Delcroix Distribution (Nantes)",
+  },
+];
+
 const TestimonialTwo = () => {
-  function SampleNextArrow(props) {
-    const { onClick } = props;
-    return (
-      <div className="TestimonialTwo-icon-box-next">
-        <button
-          onClick={onClick}
-          className="slick-arrow style2 default team-slider2-next"
-        >
-          <i className="fas fa-arrow-right" />
-        </button>
-      </div>
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { onClick } = props;
-    return (
-      <div className="TestimonialTwo-icon-box-prev">
-        <button
-          onClick={onClick}
-          className="team-slider2 slick-arrow style2 default team-slider2-prev"
-        >
-          <i className="fas fa-arrow-left" />
-        </button>
-      </div>
-    );
-  }
-
-  let settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {},
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-        },
-      },
-    ],
-  };
   return (
-    <div className="testimonial-area-2 space-bottom">
+    <section className="reviews-light" id="testimonials">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-5">
-            <div className="title-area">
-              <span className="sub-title">
-                <img src="assets/img/icon/title_left.svg" alt="shape" />
-                Clients Testimonial
-              </span>
-              <h2 className="sec-title style2">
-                Provide quality a the Services
-              </h2>
-              <p className="sec-text">
-                Lorem Ipsum is simply dummy a of the printing and type setting
-                industry Loreaim Ipsum has been
-              </p>
+        <div className="reviews-light__header">
+          <span className="reviews-light__label">Avis clients</span>
+          <h2 className="reviews-light__title">
+            Ils nous font <span className="hl-blue">confiance</span> partout en
+            France
+          </h2>
+          <div className="reviews-light__rating">
+            <div className="reviews-light__stars">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} className="fas fa-star" />
+              ))}
             </div>
-            <div className="feature-wrapper">
-              <div className="feature-icon">
-                <Link to="#">
-                  <img src="assets/img/icon/call.svg" alt="Bizmaster" />
-                </Link>
-              </div>
-              <div className="media-body">
-                <span className="header-info_label">Need help?</span>
-                <p className="header-info_link">
-                  <Link to="#">(319) 555-0115</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-7">
-            <div className="testiomonial-wrap-2">
-              <div className="row global-carousel slider-shadow testi-slider-2">
-                <Slider {...settings}>
-                  <div>
-                    <div className="testi-box">
-                      <div className="quote-icon">
-                        <img src="assets/img/icon/quote2-1.svg" alt="img" />
-                      </div>
-                      <div className="testi-box_content">
-                        <p className="testi-box_text">
-                          There are many variations of passage of Lorem Ipsum
-                          available, but the major have suffered There are many
-                          variations of passages of Lorem Ipsum available, but
-                          the majority have suffered alteration
-                        </p>
-                        <div className="testi-box-profile">
-                          <div className="testi-box-profile-details">
-                            <h4 className="testi-profile-title">
-                              Starli shaine
-                            </h4>
-                          </div>
-                          <div className="testi-profile_thumb">
-                            <img
-                              src="assets/img/testimonial/testimonial-2-1.png"
-                              alt="img"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="testi-box">
-                      <div className="quote-icon">
-                        <img src="assets/img/icon/quote2-1.svg" alt="img" />
-                      </div>
-                      <div className="testi-box_content">
-                        <p className="testi-box_text">
-                          There are many variations of passage of Lorem Ipsum
-                          available, but the major have suffered There are many
-                          variations of passages of Lorem Ipsum available, but
-                          the majority have suffered alteration
-                        </p>
-                        <div className="testi-box-profile">
-                          <div className="testi-box-profile-details">
-                            <h4 className="testi-profile-title">
-                              Starli shaine
-                            </h4>
-                          </div>
-                          <div className="testi-profile_thumb">
-                            <img
-                              src="assets/img/testimonial/testimonial-2-1.png"
-                              alt="img"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Slider>
-              </div>
-            </div>
+            <span className="reviews-light__rating-text">
+              4,9/5 · 127 avis clients vérifiés
+            </span>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="container reviews-light__swiper-wrap">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={3}
+          loop={true}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 1.4 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+          }}
+        >
+          {testimonials.map((t, idx) => (
+            <SwiperSlide key={idx}>
+              <article className="reviews-light__card">
+                <div className="reviews-light__card-top">
+                  <div className="reviews-light__stars">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="fas fa-star" />
+                    ))}
+                  </div>
+                  <i className="fas fa-quote-right reviews-light__quote" />
+                </div>
+                <p className="reviews-light__text">“{t.text}”</p>
+                <div className="reviews-light__author">
+                  <strong>{t.name}</strong>
+                  <span>{t.role}</span>
+                </div>
+              </article>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 };
 

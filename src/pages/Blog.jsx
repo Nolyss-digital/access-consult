@@ -1,44 +1,53 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Preloader from "../elements/Preloader";
 import HelmetReact from "../elements/HelmetReact";
-import HeaderOne from "../components/HeaderOne";
-import Breadcrumb from "../components/Breadcrumb";
-import FooterOne from "../components/FooterOne";
-import Newsletter from "../components/Newsletter";
-import BlogAreaAll from "../components/BlogAreaAll";
-
-
+import HeaderTwo from "../components/HeaderTwo";
+import FooterTwo from "../components/FooterTwo";
 
 const Blog = () => {
-  let [active, setActive] = useState(true);
+  const [active, setActive] = useState(true);
   useEffect(() => {
-    setTimeout(function () {
-      setActive(false);
-    }, 500);
+    const t = setTimeout(() => setActive(false), 500);
+    return () => clearTimeout(t);
   }, []);
+
   return (
     <>
-      {/* Preloader */}
-      {active === true && <Preloader />}
-
-      {/* Helmet */}
+      {active && <Preloader />}
       <HelmetReact title={"Blog"} />
+      <HeaderTwo />
 
-      {/* HeaderFive */}
-      <HeaderOne />
+      <section className="blog-soon">
+        <div className="container">
+          <div className="blog-soon__card">
+            <div className="blog-soon__icon">
+              <i className="fas fa-feather-alt" />
+            </div>
+            <h1 className="blog-soon__title">
+              Le blog arrive <span className="hl-blue">bientôt</span>
+            </h1>
+            <p className="blog-soon__text">
+              Notre équipe prépare des articles dédiés aux entrepreneurs,
+              TPE et PME françaises : conseils juridiques, paie, fiscalité,
+              développement commercial et SEO. Revenez dans quelques semaines
+              pour découvrir nos premières publications.
+            </p>
 
-      {/* Breadcrumb */}
-      <Breadcrumb title="Blog" />
+            <div className="blog-soon__actions">
+              <Link to="/contact" className="blog-soon__cta">
+                Être prévenu au lancement
+                <i className="fas fa-arrow-right" />
+              </Link>
+              <Link to="/service" className="blog-soon__link">
+                Découvrir nos services <i className="fas fa-arrow-right" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* BlogAreaAll */}
-      <BlogAreaAll />
-
-      {/* Newsletter */}
-      <Newsletter />
-
-      {/* FooterOne */}
-      <FooterOne />
-
+      <FooterTwo />
     </>
   );
 };

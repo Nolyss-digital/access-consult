@@ -3,111 +3,98 @@ import { Link } from "react-router-dom";
 
 const FooterTwo = () => {
   return (
-    <footer
-      className="footer-wrapper footer-layout2"
-      style={{ backgroundImage: "url(assets/img/bg/footer-bg2-1.png)" }}
-    >
-     <div className="container">
-  <div className="widget-area">
-    <div className="row justify-content-between">
+    <footer className="footer-light">
+      <div className="container">
+        <div className="row gy-4 footer-light__main justify-content-between">
+          {/* Column 1 — brand */}
+          <div className="col-lg-5 col-md-12">
+            <div className="footer-light__brand">
+              <Link to="/" className="footer-light__logo">
+                <img src="assets/img/logo.svg" alt="Access Consulting" />
+              </Link>
 
-      {/* À propos / Logo */}
-      <div className="col-md-6 col-xl-3">
-        <div className="widget footer-widget widget-about">
-          <div className="about-logo">
-            <Link to="/">
-              <img src="assets/img/logo.svg" alt="Acces Consulting" />
-            </Link>
-          </div>
-          <p className="footer-text mb-30">
-            Acces Consulting accompagne les entrepreneurs dans toutes leurs démarches juridiques et administratives.
-          </p>
-          <div className="social-btn style3">
-            <span className="social-title">Suivez-nous</span>
-            <Link to="https://www.facebook.com/accessconsulting"><i className="fab fa-facebook-f" /></Link>
-            <Link to="#"><i className="fab fa-instagram" /></Link>
-            <Link to="#"><i className="fab fa-linkedin-in" /></Link>
-            <Link to="#"><i className="fab fa-twitter" /></Link>
-          </div>
-        </div>
-      </div>
+              <p className="footer-light__about">
+                Access Consulting — cabinet français de conseil et de formalités
+                d’entreprise. Création, gestion, paie, domiciliation et
+                développement commercial pour TPE, PME, indépendants et
+                porteurs de projet partout en France.
+              </p>
 
-      {/* Contact */}
-      <div className="col-md-6 col-xl-3">
-        <div className="widget footer-widget">
-          <h3 className="widget_title">Contact</h3>
-          <div className="widget-contact2">
-
-            <div className="widget-contact-grid">
-              <div className="icon"><i className="fas fa-envelope" /></div>
-              <div className="contact-grid-details">
-                <h6>
-                  <Link to="#">contact@acces-consulting.fr</Link>
-                </h6>
-              </div>
+              <ul className="footer-light__contact">
+                <li>
+                  <i className="fas fa-phone-alt" />
+                  <a href="tel:+33184950000">+33 1 84 95 00 00</a>
+                </li>
+                <li>
+                  <i className="fas fa-envelope" />
+                  <a href="mailto:contact@acces-consult.fr">
+                    contact@acces-consult.fr
+                  </a>
+                </li>
+                <li>
+                  <i className="fas fa-map-marker-alt" />
+                  <span>Paris · Lyon · Marseille · Bordeaux</span>
+                </li>
+              </ul>
             </div>
-
-            <div className="widget-contact-grid">
-              <div className="icon"><i className="fas fa-map-marker-alt" /></div>
-              <div className="contact-grid-details">
-                <a href="https://maps.app.goo.gl/6r5FgUSFffTg1d8u7"><h6>106 Avenue de Saint Louis 13015 Marseille, France</h6></a>
-                
-              </div>
-            </div>
-
-            <div className="widget-contact-grid">
-              <div className="working-time">
-                <span className="title">Horaires</span>
-                <p className="desc">Lundi à Vendredi : 09h00 - 12h00 | 13h30 - 18h00</p>
-              </div>
-            </div>
-
           </div>
-        </div>
-      </div>
 
-      {/* Liens utiles */}
-      <div className="col-md-6 col-xl-auto">
-        <div className="widget widget_nav_menu footer-widget">
-          <h3 className="widget_title">Liens utiles</h3>
-          <div className="menu-all-pages-container">
-            <ul className="menu">
-              <li><Link to="/creation-gestion-entreprises">Création & gestion d’entreprises</Link></li>
-              <li><Link to="/domiciliation-entreprises">Domiciliation d’entreprises</Link></li>
-              <li><Link to="/developpement-commercial">Développement commercial</Link></li>
-              <li><Link to="/creation-site-web">Création de sites web</Link></li>
+          {/* Column 2 — Services */}
+          <div className="col-lg-3 col-md-6">
+            <h4 className="footer-light__title">Services</h4>
+            <ul className="footer-light__menu">
+              <li>
+                <Link to="/creation-gestion-entreprises">
+                  Création d’entreprise
+                </Link>
+              </li>
+              <li>
+                <Link to="/gestion-paie">Gestion de la paie</Link>
+              </li>
+              <li>
+                <Link to="/domiciliation-entreprises">Domiciliation</Link>
+              </li>
+              <li>
+                <Link to="/developpement-commercial">
+                  Développement commercial
+                </Link>
+              </li>
+              <li>
+                <Link to="/creation-site-web">Sites web & SEO</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3 — Société */}
+          <div className="col-lg-3 col-md-6">
+            <h4 className="footer-light__title">Société</h4>
+            <ul className="footer-light__menu">
+              <li>
+                <Link to="/about">À propos</Link>
+              </li>
+              <li>
+                <Link to="/avis-clients">Avis clients</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/contact">Mentions légales</Link>
+              </li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Galerie */}
-     
-
-    </div>
-  </div>
-
-  {/* Copyright */}
-  <div className="copyright-wrap">
-    <div className="container">
-      <div className="row gy-3 justify-content-lg-between justify-content-center">
-        <div className="col-auto align-self-center">
-          <p className="copyright-text text-center">
-            © <Link to="#">Acces Consulting</Link> 2026 | Tous droits réservés
+        <div className="footer-light__bottom">
+          <p>
+            © 2026 Access Consulting — Cabinet de conseil aux entreprises en
+            France. Tous droits réservés.
           </p>
         </div>
-        <div className="col-auto">
-          <div className="footer-links">
-            <Link to="/contact">Mentions légales</Link>
-            <Link to="/contact">Politique de confidentialité</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </footer>
   );
 };

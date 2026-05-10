@@ -2,25 +2,13 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RouteScrollToTop from "./elements/RouteScrollToTop";
 import ScrollToTop from "react-scroll-to-top";
-// import IndexPage from "./pages/IndexPage";
-// import HomeOne from "./pages/HomeOne";
 import HomeTwo from "./pages/HomeTwo";
-import HomeThree from "./pages/HomeThree";
-import HomeFour from "./pages/HomeFour";
-import HomeFive from "./pages/HomeFive";
 import About from "./pages/About";
 import Service from "./pages/Service";
-import ServiceDetails from "./pages/ServiceDetails";
-import Project from "./pages/Project";
-import ProjectDetails from "./pages/ProjectDetails";
 import Blog from "./pages/Blog";
-import BlogDetails from "./pages/BlogDetails";
-import Pricing from "./pages/Pricing";
-import Team from "./pages/Team";
-import TeamDetails from "./pages/TeamDetails";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
-import Sasu from "./pages/Sasu";
+import AvisClients from "./pages/AvisClients";
 import SiteWeb from "./pages/sitesweb";
 import CreationEntreprises from "./pages/CreationEntreprises";
 import GestionPaie from "./pages/GestionPaie";
@@ -39,23 +27,11 @@ const App = () => {
         <ScrollToTop smooth color="#136aea" />
         <Routes>
           <Route exact path="/" element={<HomeTwo />} />
-          <Route exact path="/home-2" element={<HomeTwo />} />
-          <Route exact path="/home-3" element={<HomeThree />} />
-          <Route exact path="/home-4" element={<HomeFour />} />
-          <Route exact path="/home-5" element={<HomeFive />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/service" element={<Service />} />
-          <Route exact path="/service-details" element={<ServiceDetails />} />
-          <Route exact path="/project" element={<Project />} />
-          <Route exact path="/project-details" element={<ProjectDetails />} />
+          <Route exact path="/avis-clients" element={<AvisClients />} />
           <Route exact path="/blog" element={<Blog />} />
-          <Route exact path="/blog-details" element={<BlogDetails />} />
-          <Route exact path="/pricing" element={<Pricing />} />
-          <Route exact path="/team" element={<Team />} />
-          <Route exact path="/team-details" element={<TeamDetails />} />
           <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="*" element={<Error />} />
-          <Route exact path="/sasu" element={<Sasu />} />
           <Route exact path="/creation-site-web" element={<SiteWeb />} />
           <Route exact path="/creation-gestion-entreprises" element={<CreationEntreprises />} />
           <Route exact path="/gestion-paie" element={<GestionPaie />} />
@@ -65,6 +41,7 @@ const App = () => {
           <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
           <Route exact path="/developpement-commercial" element={<DevCommercial />} />
           <Route exact path="/gestion-reseaux-sociaux" element={<ResauxSociaux />} />
+          <Route exact path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </>

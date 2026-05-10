@@ -6,77 +6,28 @@ import HeroTwo from "../components/HeroTwo";
 import AboutTwo from "../components/AboutTwo";
 import ServiceThree from "../components/ServiceThree";
 import WhyChoose from "../components/WhyChoose";
-// import PortfolioTwo from "../components/PortfolioTwo";
-// import TestimonialTwo from "../components/TestimonialTwo";
-import CounterOne from "../components/CounterOne";
-// import TeamTwo from "../components/TeamTwo";
-// import ClientOne from "../components/ClientOne";
-// import EventOne from "../components/EventOne";
-// import PricingOne from "../components/PricingOne";
-import AppointmentOne from "../components/AppointmentOne";
-// import CTATwo from "../components/CTATwo";
-// import BlogTwo from "../components/BlogTwo";
+import TestimonialTwo from "../components/TestimonialTwo";
+import CTATwo from "../components/CTATwo";
 import FooterTwo from "../components/FooterTwo";
-// import CTAOne from "../components/CTAOne";
 
 const HomeTwo = () => {
-  let [active, setActive] = useState(true);
+  const [active, setActive] = useState(true);
   useEffect(() => {
-    setTimeout(function () {
-      setActive(false);
-    }, 500);
+    const t = setTimeout(() => setActive(false), 500);
+    return () => clearTimeout(t);
   }, []);
+
   return (
     <>
-      {/* Preloader */}
-      {active === true && <Preloader />}
-
-      {/* Helmet */}
+      {active && <Preloader />}
       <HelmetReact title={"Accueil"} />
-
-      {/* HeaderTwo */}
       <HeaderTwo />
-
-      {/* HeroTwo */}
       <HeroTwo />
-
-      {/* AboutTwo */}
       <AboutTwo />
-
-       {/* WhyChoose */}
-      <div className="space-bottom">
-        <WhyChoose />
-      </div>
-
-      {/* ServiceThree */}
+      <WhyChoose />
       <ServiceThree />
-
-
-      {/* CounterOne */}
-      <CounterOne />
-
-
-      {/* ClientOne */}
-      {/* <ClientOne /> */}
-
-      {/* EventOne */}
-      {/* <EventOne /> */}
-
-      {/* PricingOne */}
-      {/* <PricingOne /> */}
-
-      {/* AppointmentOne */}
-      <div className="pt-5">
-      <AppointmentOne />
-      </div>
-
-      {/* CTA_Two */}
-      {/* <CTATwo /> */}
-
-      {/* BlogTwo */}
-      {/* <BlogTwo /> */}
-
-      {/* FooterTwo */}
+      <TestimonialTwo />
+      <CTATwo />
       <FooterTwo />
     </>
   );

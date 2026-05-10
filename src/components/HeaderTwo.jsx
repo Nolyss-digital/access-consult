@@ -1,180 +1,179 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderTwo = () => {
-  const [active, setActive] = useState(false);
-  const [scroll, setScroll] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openSub, setOpenSub] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    let offCanvasNav = document.getElementById("offcanvas-navigation");
-    let offCanvasNavSubMenu = offCanvasNav.querySelectorAll(".sub-menu");
-
-    for (let i = 0; i < offCanvasNavSubMenu.length; i++) {
-      offCanvasNavSubMenu[i].insertAdjacentHTML(
-        "beforebegin",
-        "<span class='mean-expand-class'>+</span>"
-      );
-    }
-
-    let menuExpand = offCanvasNav.querySelectorAll(".mean-expand-class");
-    let numMenuExpand = menuExpand.length;
-
-    function sideMenuExpand() {
-      if (this.parentElement.classList.contains("active") === true) {
-        this.parentElement.classList.remove("active");
-      } else {
-        for (let i = 0; i < numMenuExpand; i++) {
-          menuExpand[i].parentElement.classList.remove("active");
-        }
-        this.parentElement.classList.add("active");
-      }
-    }
-
-    for (let i = 0; i < numMenuExpand; i++) {
-      menuExpand[i].addEventListener("click", sideMenuExpand);
-    }
-    window.onscroll = () => {
-      if (window.pageYOffset < 250) {
-        setScroll(false);
-      } else if (window.pageYOffset > 250) {
-        setScroll(true);
-      }
-      return () => (window.onscroll = null);
-    };
+    const onScroll = () => setScrolled(window.pageYOffset > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const mobileMenu = () => {
-    setActive(!active);
+  const closeMobile = () => {
+    setMobileOpen(false);
+    setOpenSub(null);
   };
 
+  const isActive = (path) =>
+    location.pathname === path ||
+    (path === "/" && location.pathname === "/home-2");
+
+  const services = [
+    { to: "/creation-gestion-entreprises", label: "Création & gestion d’entreprises" },
+    { to: "/gestion-paie", label: "Gestion de la paie" },
+    { to: "/domiciliation-entreprises", label: "Domiciliation d’entreprises" },
+    { to: "/administration-entreprises", label: "Administration des entreprises" },
+    { to: "/Assistance-appels-offres", label: "Assistance aux appels d’offres" },
+    { to: "/reception-emission-appels", label: "Réception & émission d’appels" },
+    { to: "/developpement-commercial", label: "Développement commercial" },
+    { to: "/creation-site-web", label: "Création de sites web" },
+    { to: "/gestion-reseaux-sociaux", label: "Gestion des réseaux sociaux" },
+  ];
 
   return (
-  <>
-    {/* ================= Mobile Menu ================= */}
-    <div className={`mobile-menu-wrapper ${active ? "body-visible" : ""}`}>
-      <div className="mobile-menu-area">
-        <div className="mobile-logo">
-          <Link to="/">
-            <img src="assets/img/logo.svg" alt="Logo" />
+    <>
+      <header className={`navbar-light ${scrolled ? "is-scrolled" : ""}`}>
+        <div className="container navbar-light__inner">
+          {/* Logo */}
+          <Link to="/" className="navbar-light__logo">
+            <img src="assets/img/logo.svg" alt="Access Consulting" />
           </Link>
-          <button className="menu-toggle" onClick={mobileMenu}>
-            <i className="fa fa-times" />
+
+          {/* Desktop menu */}
+          <nav className="navbar-light__menu">
+            <ul>
+              <li>
+                <Link to="/" className={isActive("/") ? "is-active" : ""}>
+                  Accueil
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className={isActive("/about") ? "is-active" : ""}>
+                  À propos
+                </Link>
+              </li>
+              <li className="has-sub">
+                <Link to="/service" className={isActive("/service") ? "is-active" : ""}>
+                  Services <i className="fas fa-chevron-down" />
+                </Link>
+                <ul className="sub-menu">
+                  {services.map((s) => (
+                    <li key={s.to}>
+                      <Link to={s.to}>{s.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              <li>
+                <Link
+                  to="/avis-clients"
+                  className={isActive("/avis-clients") ? "is-active" : ""}
+                >
+                  Avis clients
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className={isActive("/blog") ? "is-active" : ""}>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className={isActive("/contact") ? "is-active" : ""}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* CTA + mobile toggle */}
+          <div className="navbar-light__actions">
+            <Link to="/contact" className="navbar-light__cta">
+              Devis gratuit
+              <i className="fas fa-arrow-right" />
+            </Link>
+            <button
+              type="button"
+              className="navbar-light__toggle"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Ouvrir le menu"
+            >
+              <i className="fas fa-bars" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile drawer */}
+      <div className={`navbar-light__drawer ${mobileOpen ? "is-open" : ""}`}>
+        <div className="navbar-light__drawer-head">
+          <Link to="/" onClick={closeMobile}>
+            <img src="assets/img/logo.svg" alt="Access Consulting" />
+          </Link>
+          <button
+            type="button"
+            onClick={closeMobile}
+            aria-label="Fermer le menu"
+          >
+            <i className="fas fa-times" />
           </button>
         </div>
 
-        <div className="mobile-menu">
-          <ul id="offcanvas-navigation">
-            <li>
-              <Link to="/" onClick={mobileMenu}>Accueil</Link>
-            </li>
+        <ul className="navbar-light__drawer-menu">
+          <li>
+            <Link to="/" onClick={closeMobile}>Accueil</Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={closeMobile}>À propos</Link>
+          </li>
+          <li className={`has-sub ${openSub === "services" ? "is-open" : ""}`}>
+            <button
+              type="button"
+              onClick={() =>
+                setOpenSub(openSub === "services" ? null : "services")
+              }
+            >
+              Services <i className="fas fa-chevron-down" />
+            </button>
+            <ul>
+              {services.map((s) => (
+                <li key={s.to}>
+                  <Link to={s.to} onClick={closeMobile}>{s.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li>
+            <Link to="/avis-clients" onClick={closeMobile}>Avis clients</Link>
+          </li>
+          <li>
+            <Link to="/blog" onClick={closeMobile}>Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={closeMobile}>Contact</Link>
+          </li>
+        </ul>
 
-            <li>
-              <Link to="/about" onClick={mobileMenu}>À propos</Link>
-            </li>
-
-            <li className="menu-item-has-children submenu-item-has-children">
-              <Link to="#">Services</Link>
-              <ul className="sub-menu submenu-class">
-                <li><Link to="/creation-gestion-entreprises" onClick={mobileMenu}>Création & gestion d’entreprises</Link></li>
-                <li><Link to="/gestion-paie" onClick={mobileMenu}>Gestion de la paie</Link></li>
-                <li><Link to="/domiciliation-entreprises" onClick={mobileMenu}>Domiciliation d’entreprises</Link></li>
-                <li><Link to="/administration-entreprises" onClick={mobileMenu}>Administration des entreprises</Link></li>
-                <li><Link to="/Assistance-appels-offres" onClick={mobileMenu}>Assistance aux appels d’offres</Link></li>
-                <li><Link to="/reception-emission-appels" onClick={mobileMenu}>Réception & émission d’appels</Link></li>
-                <li><Link to="/developpement-commercial" onClick={mobileMenu}>Développement commercial</Link></li>
-                <li><Link to="/creation-site-web" onClick={mobileMenu}>Création de sites web</Link></li>
-                <li><Link to="/gestion-reseaux-sociaux" onClick={mobileMenu}>Gestion des réseaux sociaux</Link></li>
-              </ul>
-            </li>
-
-            <li>
-              <Link to="/contact" onClick={mobileMenu}>Contact</Link>
-            </li>
-          </ul>
+        <div className="navbar-light__drawer-cta">
+          <Link to="/contact" onClick={closeMobile} className="navbar-light__cta">
+            Devis gratuit
+            <i className="fas fa-arrow-right" />
+          </Link>
         </div>
       </div>
-    </div>
 
-    {/* ================= Header Area ================= */}
-    <header className="nav-header header-layout2">
-      <div className={`sticky-wrapper ${scroll ? "sticky" : ""}`}>
-        <div className="menu-area">
-          <div className="container">
-            <div className="row align-items-center justify-content-between">
-
-              {/* Logo */}
-              <div className="col-auto">
-                <div className="header-logo">
-                  <Link to="/">
-                    <img src="assets/img/logo.svg" alt="Logo" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Main Menu */}
-              <div className="col-auto">
-                <nav className="main-menu d-none d-lg-inline-block">
-                  <ul>
-                    <li>
-                      <Link to="/">Accueil</Link>
-                    </li>
-
-                    <li>
-                      <Link to="/about">À propos</Link>
-                    </li>
-
-                    <li className="menu-item-has-children">
-                      <Link to="#">Services</Link>
-                      <ul className="sub-menu">
-                        <li><Link to="/creation-gestion-entreprises">Création & gestion d’entreprises</Link></li>
-                        <li><Link to="/gestion-paie">Gestion de la paie</Link></li>
-                        <li><Link to="/domiciliation-entreprises">Domiciliation d’entreprises</Link></li>
-                        <li><Link to="/administration-entreprises">Administration des entreprises</Link></li>
-                        <li><Link to="/Assistance-appels-offres">Assistance aux appels d’offres</Link></li>
-                        <li><Link to="/reception-emission-appels">Réception & émission d’appels</Link></li>
-                        <li><Link to="/developpement-commercial">Développement commercial</Link></li>
-                        <li><Link to="/creation-site-web">Création de sites web</Link></li>
-                        <li><Link to="/gestion-reseaux-sociaux">Gestion des réseaux sociaux</Link></li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </nav>
-
-                {/* Mobile Toggle */}
-                <div className="navbar-right d-inline-flex d-lg-none">
-                  <button
-                    type="button"
-                    className="menu-toggle icon-btn"
-                    onClick={mobileMenu}
-                  >
-                    <i className="fas fa-bars" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Button */}
-              <div className="col-auto d-xl-block d-none">
-                <div className="header-button">
-                  <Link to="/contact" className="global-btn">
-                    Nous contacter
-                    <img src="assets/img/icon/right-icon.svg" alt="icon" />
-                  </Link>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  </>
-);
-
-
+      {mobileOpen && (
+        <div
+          className="navbar-light__backdrop"
+          onClick={closeMobile}
+          aria-hidden="true"
+        />
+      )}
+    </>
+  );
 };
 
 export default HeaderTwo;
