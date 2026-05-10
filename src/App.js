@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import AvisClients from "./pages/AvisClients";
+import MentionsLegales from "./pages/MentionsLegales";
 import SiteWeb from "./pages/sitesweb";
 import CreationEntreprises from "./pages/CreationEntreprises";
 import GestionPaie from "./pages/GestionPaie";
@@ -41,6 +42,7 @@ const App = () => {
           <Route exact path="/reception-emission-appels" element={<ReceptionAppels />} />
           <Route exact path="/developpement-commercial" element={<DevCommercial />} />
           <Route exact path="/gestion-reseaux-sociaux" element={<ResauxSociaux />} />
+          <Route exact path="/mentions-legales" element={<MentionsLegales />} />
           <Route exact path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

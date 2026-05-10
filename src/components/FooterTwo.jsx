@@ -82,7 +82,7 @@ const FooterTwo = () => {
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/contact">Mentions légales</Link>
+                <Link to="/mentions-legales">Mentions légales</Link>
               </li>
             </ul>
           </div>
